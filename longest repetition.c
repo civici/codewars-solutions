@@ -10,7 +10,9 @@
 
 char longest_repetition(char* s, size_t* n){
 
-    if (*n == 0){
+    size_t len = strlen(s);
+
+    if (len == 0){
         return 0;
     }
 
@@ -20,14 +22,14 @@ char longest_repetition(char* s, size_t* n){
     char temp = 0;
     int temprep = 0;
 
-    for (size_t i = 0; i < *n; i++){
+    for (size_t i = 0; i < len; i++){
         char currentchar = s[i];
         if (currentchar != temp){
             temp = currentchar;
         }
         temprep++;
 
-        if (i < *(n) - 1){
+        if (i < len - 1){
             if (s[i + 1] != currentchar){
                 if (temprep > rep){
                     max = temp;
