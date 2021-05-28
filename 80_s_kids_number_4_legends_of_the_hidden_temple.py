@@ -22,4 +22,3 @@ def mark_spot(n):
         finalStr += "\n"
 
     return finalStr
-
