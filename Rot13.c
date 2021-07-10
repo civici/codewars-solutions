@@ -29,6 +29,5 @@ char *rot13(const char *src)
 		*temp++ = c;
 		src++;
 	}
-
 	return buf;
 }

@@ -48,7 +48,7 @@ char* stockSummary(char** lstOfArt, int szlst, char** categories, int szcat)
 
 	char* buf = calloc(100, 1);
 
-	for (register unsigned char i = 0; i < szcat; i++)
+	for (volatile register unsigned char i = 0; i < szcat; i++)
 	{
 		char* temp = calloc(10, 1);
 		sprintf(temp, "(%c : %d)", array[i].code, array[i].stock);
